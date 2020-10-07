@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Week 02 - Layout Slicing</title>
+</head>
+
+<body class="nav-fixed">
+    <!-- Bu kısım navigasyon kısmı, search, menü ve login butonlarının bulunduğu yer. -->
+    <header class="button-group">
+        <nav class="navbar">
+            <div id="search">
+                <input type="text">
+                <a class="menu-botton" href="">menu</a>
+                <button id="login" class="login-button-1" type="button">Login</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <header class="button-group-1">
+            <!-- Ana gövdenin herader kısmı, çeşitli menülerin bulunduğu kısım. -->
+            <div class="buttons">
+                <a class="menu-button-2" href="">Sections</a>
+                <a class="menu-button-3" href="">Settings</a>
+            </div>
+            <!-- Başlık, açıklama ve çeşitli linklerin bulunduğu kısım. -->
+            <div>
+                <h1 class="topic-title">Topic Title</h1>
+                <p class="text">Descriptions</p>
+            </div>
+        </header>
+        <!-- bir çok div etiketinin bulunğu kısım ve her div içerisinde img tagları var-->
+        <section class="ikons">
+            <div class="block-inline"> 
+              <a class="ikon-1" href="">
+                  <img id="ikon-1" src="" alt="">ikon picture</a>  
+            </div>
+            <div class="block-inline"> 
+                <a class="ikon-2" href="">
+                    <img id="ikon-2" src="" alt="">ikon picture</a>  
+              </div>
+        </section>
+    </main>
+</body>
+</html>

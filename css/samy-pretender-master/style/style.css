@@ -1,0 +1,133 @@
+/********************
+General Styling
+********************/
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(63, 59, 59);
+}
+/********************
+Typology
+********************/
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+legend{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+blockquote{
+    font-size: 18px;
+    color: #aaaaaa;
+    font-style: italic;
+}
+/*fieldset altindaki tüm spanler*/
+fieldset span{
+    float: right;
+}
+
+/********************
+Colors
+********************/
+blockquote{
+    color: #aaaaaa;
+}
+
+tr:nth-child(even){
+    background: lightskyblue;
+}
+
+th{
+    background: #333333;
+    color: white;
+}
+
+/********************
+Layout
+********************/
+main{
+    width: 800px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+header{
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    padding: 20px;
+
+}
+
+#content-container{
+    display: flex;
+}
+
+fieldset{
+    margin-top: 20px;
+}
+
+
+/********************
+Components
+********************/
+figure{
+    
+    margin:0px;
+    margin-top: 20px;
+}
+figcaption{
+    text-align: center;
+}
+.profile-image{
+    max-width: 200px;
+}
+
+/*social meda div taginin altindaki tüm img taglari kestediliyor*/
+.social-media img{
+    width: 33px;
+}
+.social-media{
+    margin-top: 10px;
+}
+
+.header-info{
+    text-shadow: 2px 2px 2px white;
+    font-size: 16px;
+}
+.right-side{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+table{
+    border-collapse: collapse;
+    border: 0px;
+    font-size: 14px;
+    width: 100%;
+}
+
+caption{
+    font-weight: bolder;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px grey;
+    text-transform: capitalize;
+}
+
+th{
+    text-align: left;
+}
+
+td{
+    padding: 5px;
+    font-size: 14px;
+}
+footer{
+    font-size: small;
+    margin-top: 10px;
+    padding: 2px;
+    text-align: center;
+    background-color:#d8e5ec;
+}
+.social-media-1{
+    margin-right: 20px;
+}

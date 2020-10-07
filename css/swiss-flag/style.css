@@ -1,0 +1,25 @@
+main{
+    background-color: red;
+    width: 600px;
+    height: 600px;
+}
+.container{
+    padding: 20%;
+}
+.flame{
+    float: left;
+}
+/* White place */
+.white{
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    color: white;
+}
+/* Red place */
+.red{
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    color: red;
+}
