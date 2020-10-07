@@ -1,5 +1,5 @@
 *{
-    margin: 0px; 
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
@@ -35,7 +35,10 @@ img{
     margin: 40px;
     color: #DEE6EF;
 }
-.home_main{
+.nav-menu:hover{
+    color: #75523c;
+}
+#home_main{
     text-align: center;
     color: #DEE6EF;
     height: 630px;
@@ -44,7 +47,7 @@ img{
     background-repeat: no-repeat;
     background-size: cover; */
 }
-.about_main{
+#about_main{
     text-align: center;
     color: #DEE6EF;
     background-image: url("./img/arka_plan.png");
@@ -76,6 +79,9 @@ legend{
     font-size: 20px;
     margin: 20px;
 }
+legend:hover{
+    color: #75523c;
+}
 table{
     width: 100%;
 }
@@ -86,7 +92,10 @@ td{
     padding: 10px;
     background: #442C1D;
 }
-.about{
+h2{
+    margin: 20px;
+}
+#about{
     background: #442C1D;
     width: 500px;
     display: inline-block;
@@ -99,7 +108,8 @@ td{
     text-shadow: 1px 1px rgb(97, 26, 26);
     box-shadow: 5px 5px 5px 5px #4d382b;
 }
-.about_footer{
+/* about sayfasinin footer stili */
+#about_footer{
     position: relative;
     background-color: #442c1d;
     color: #DEE6EF;
@@ -124,6 +134,7 @@ fieldset{
     margin: 200px;
     height: 218px;
 }
+/* kontak sayfasina özel body stili */
 .contact_body{
     height: 800px;
 }
@@ -136,13 +147,13 @@ fieldset{
     text-shadow: 1px 1px rgb(97, 26, 26);
     box-shadow: 5px 5px 5px 5px #4d382b;
 }
-h3{
+h3, footer{
     text-align: center;
 }
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
+    padding: 12px; /* Some padding */
     border: 1px solid #442C1D; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -150,7 +161,7 @@ input[type=text], select, textarea {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
-  
+
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
     background-color: white;
@@ -160,14 +171,33 @@ input[type=text], select, textarea {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+
   /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
+input[type=submit]:hover {
     background-color: #75523c;
   }
-  
+
   /* Add a background color and some padding around the form */
-  .container {
+.container {
     border-radius: 5px;
     padding: 20px;
   }
+  /* arkadaş resimleri */
+.img{
+      width: 50px;
+      height: 50px;
+  }
+/* ödev için yazı stili ayarlama */
+.type-1:hover{
+    color: #75523c;
+  }
+.type-2{
+    text-decoration: underline;
+  }
+  .type-3{
+    font-style: italic;
+}
+  /* .img:hover{
+      width: 150px;
+      height: 150px;
+  } */

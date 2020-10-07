@@ -1,8 +1,18 @@
-body{
-    background-color: aqua;
+.products_a{
+    background-image: url(./img/Background_a.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-
-a{
-    color:red;
+.products_b{
+    background-image: url(./img/Background_b.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.products_c{
+    background-image: url(./img/Background_c.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
