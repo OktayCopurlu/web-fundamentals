@@ -1,0 +1,41 @@
+body{
+    background-color:rgb(84, 165, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+main{
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    border-radius: 10px;
+}
+.sections, .articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.prices, .buttons{
+    margin-bottom: 30px;
+}
+img{
+    width:15vw;
+}
+.buttons{
+    padding: 7px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid rgb(84, 165, 185);
+    border-radius: 6px
+}
+.buttons:hover{
+    background-color:rgb(84, 165, 185);
+}
+.prices, p{
+
+}
