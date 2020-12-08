@@ -10,7 +10,6 @@ Program feed:
 let suspiciousWagon = []
 let locatedWagon = [];
 let numberOfPredictions =0;
-let prediction=""; //prompt("Tahmininizi Giriniz :")
 
 //Random wagon numbers from 1 to 10 are generated and stored in this wagon.
 let number = Math.floor((Math.random() * 10) + 1);
@@ -19,6 +18,7 @@ suspiciousWagon.push(number)
 //The user will have to find the wagon with the problem in maximum 4 attempts.
 //The user will be guided by the expressions in the front wagon or the rear wagon to help him find which wagon he is in more easily.
 for(let numberOfPredictions=0; numberOfPredictions < 4; numberOfPredictions++){
+    let prediction=""; //prompt("Tahmininizi Giriniz :")
     if (suspiciousWagon[0]==prediction){
         console.log("congratulations correct guess...")
         locatedWagon.push(prediction)
