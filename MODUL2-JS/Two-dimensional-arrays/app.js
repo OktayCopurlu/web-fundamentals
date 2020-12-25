@@ -21,12 +21,11 @@ const notes = [
     ["Urs", 49, 45, 56, 67],
     ["Monika", 49, 42, 16, 62]
 ];
-console.log("**************************************************************")
 
 // - Sinifin her dersinin ortalamasinin ayri ayri hesaplanmasi
 let dersOrtalamasi = [];
 
-function dersOrtalmasi() {
+function bulDersOrtalmasi() {
     for (let satir = 1; satir < notes[0].length; satir++){
         let notToplami = 0
         for (let sutun = 0; sutun < notes.length; sutun++){
@@ -37,7 +36,7 @@ function dersOrtalmasi() {
     }
     return;
 }
-console.log(dersOrtalmasi(),"\n", 
+console.log(bulDersOrtalmasi(),"\n", 
     "Matematik Ortlamasi:", dersOrtalamasi[0],"\n", 
     "Almanca Ortalamasi:", dersOrtalamasi[1],"\n", 
     "Ingilizce Ortalamasi:", dersOrtalamasi[2],"\n", 
@@ -46,17 +45,17 @@ console.log(dersOrtalmasi(),"\n",
 console.log("**************************************************************")
 //- Herhangi bir dersden 70 puan üstü alanlarin listesi bulmasi
 const ISTENEN_PUAN = 70;
-let istenenPuaniAlanlar = []
+let YetmisPuaniGecenler = []
 
 for (let sutun = 0; sutun < notes.length; sutun++) {
     for (let satir = 1; satir < notes.length; satir++) {
         if (ISTENEN_PUAN < notes[sutun][satir]) {
-            istenenPuaniAlanlar.push(notes[sutun][0])
+            YetmisPuaniGecenler.push(notes[sutun][0])
             break;
         }
     }
 }
-console.log("70 Puan Üstünde Not Alan Ögrenciler:", istenenPuaniAlanlar)
+console.log("70 Puan Üstünde Not Alan Ögrenciler:", YetmisPuaniGecenler)
 
 console.log("*************************************************************")
 //- Tüm derslerden ortalamanin üstünde olanlarin listesinin olusturulmasi
@@ -64,29 +63,29 @@ const matametikOrtalamasi = dersOrtalamasi[0]
 const almancaOrtalamasi = dersOrtalamasi[1]
 const ingilizceOrtalamasi = dersOrtalamasi[2]
 const cografyaOrtalamasi = dersOrtalamasi[3]
-let matematikDersindenBasariliOgrenciler = []
-let almancaDersindenBasariliOgrenciler = []
-let ingilizceDersindenBasariliOgrenciler = []
-let cografyaDersindenBasariliOgrenciler = []
+let matematikDersindeBasariliOgrenciler = []
+let almancaDersindeBasariliOgrenciler = []
+let ingilizceDersindeBasariliOgrenciler = []
+let cografyaDersindeBasariliOgrenciler = []
 
 for (let sutun = 0; sutun < notes.length; sutun++) {
     if (notes[sutun][1] > matametikOrtalamasi) {
-        matematikDersindenBasariliOgrenciler.push(notes[sutun][0]);
+        matematikDersindeBasariliOgrenciler.push(notes[sutun][0]);
     }
     if (notes[sutun][2] > almancaOrtalamasi) {
-        almancaDersindenBasariliOgrenciler.push(notes[sutun][0]);
+        almancaDersindeBasariliOgrenciler.push(notes[sutun][0]);
     }
     if (notes[sutun][3] > ingilizceOrtalamasi) {
-        ingilizceDersindenBasariliOgrenciler.push(notes[sutun][0]);
+        ingilizceDersindeBasariliOgrenciler.push(notes[sutun][0]);
     }
     if (notes[sutun][4] > cografyaOrtalamasi) {
-        cografyaDersindenBasariliOgrenciler.push(notes[sutun][0]);
+        cografyaDersindeBasariliOgrenciler.push(notes[sutun][0]);
     }
 }
-console.log("Matemetik Dersinde Ortalamanin Ustunde Olan Ögrenciler :", matematikDersindenBasariliOgrenciler)
-console.log("Almanca Dersinde Ortalamanin Ustunde Olan Ögrenciler   :", almancaDersindenBasariliOgrenciler)
-console.log("Ingilizce Dersinde Ortalamanin Ustunde Olan Ögrenciler :", ingilizceDersindenBasariliOgrenciler)
-console.log("Cografya Dersinde Ortalamanin Ustunde Olan Ögrenciler  :", cografyaDersindenBasariliOgrenciler)
+console.log("Matemetik Dersinde Ortalamanin Ustunde Olan Ögrenciler :", matematikDersindeBasariliOgrenciler)
+console.log("Almanca Dersinde Ortalamanin Ustunde Olan Ögrenciler   :", almancaDersindeBasariliOgrenciler)
+console.log("Ingilizce Dersinde Ortalamanin Ustunde Olan Ögrenciler :", ingilizceDersindeBasariliOgrenciler)
+console.log("Cografya Dersinde Ortalamanin Ustunde Olan Ögrenciler  :", cografyaDersindeBasariliOgrenciler)
 
 console.log("*************************************************************")
 //- Sinifin hangi dersde en iyi nota sahip oldugunu gostermesi
