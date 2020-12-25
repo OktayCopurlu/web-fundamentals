@@ -1,7 +1,9 @@
 /*
 Merhaba arkadaslar
 Bu haftaki diger odevimiz iki boyutlu Array'ler ile ilgili olacaktir.
-Yukarida verilen cok boyutlu array'de her bir array ilk slotunda ögrenci ismi ve sonrasinda sirasi ile Matematik, Almanca, Ingilizce ve Cografya derslerini icermektedir. Yazacaginiz kod, bu cok boyutlu array üzerinde asagidaki islemleri gerceklestirmesi gerekmektedir.
+Yukarida verilen cok boyutlu array'de her bir array ilk slotunda ögrenci ismi ve sonrasinda sirasi ile 
+Matematik, Almanca, Ingilizce ve Cografya derslerini icermektedir. Yazacaginiz kod, bu cok boyutlu array üzerinde 
+asagidaki islemleri gerceklestirmesi gerekmektedir.
 
 - Sinifin her dersinin ortalamasinin ayri ayri hesaplanmasi
 - Herhangi bir dersden 70 puan üstü alanlarin listesi bulmasi
