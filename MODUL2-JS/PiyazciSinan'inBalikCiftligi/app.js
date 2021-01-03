@@ -175,9 +175,9 @@ function bulABdenGelenUcuzBalik() {
             ABdenGelenUcuzBaliklar.push(fishFarm[index].fishType + "  -- Menşe Ülke :" + neredenGeldi + "   -- Fiyatı :" + element)
         }
     }
-    return console.log("5.Cevap : AB den gelen fiyatı 10 chf den az balıklar :" + ABdenGelenUcuzBaliklar)
+    let alfabatikListe = ABdenGelenUcuzBaliklar.sort()
+    return console.log("5.Cevap : AB den gelen fiyatı 10 chf den az balıklar :" + alfabatikListe)
 }
-
 bulABdenGelenUcuzBalik()
 
 //6) Toplam balik stoku ne kadardir?
@@ -305,30 +305,30 @@ function bulZhOrtalamaGram() {
 }
 bulZhOrtalamaGram()
 
-/*
+
 //4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
 
 let balikSonKullanmaTarihi = [];
-let siraliListe = [];
-let girisTarihi = [];
 
 function gosterSonKullanmaTarihi() {
     for (let index = 0; index < fishFarm.length; index++) {
-        const dayanmaSuresi = fishFarm[index].durationInDays;
-        girisTarihi.push(fishFarm[index].entryDate);
+        let dayanmaSuresi = fishFarm[index].durationInDays;
+        let girisTarihi = fishFarm[index].entryDate;
         let balikIsimleri = fishFarm[index].fishType;
 
-        balikSonKullanmaTarihi.push(balikIsimleri + "  " + girisTarihi.sort(function(a, b) { return a - b }))
+        Date.prototype.addDays = function(days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        }
+        var date = girisTarihi;
 
-
-        //balikSonKullanmaTarihi.push(girisTarihi.setDate(girisTarihi.getDate() + dayanmaSuresi))
+        balikSonKullanmaTarihi.push(balikIsimleri)
+        balikSonKullanmaTarihi.push(date.addDays(dayanmaSuresi).valueOf())
     }
 
-    //balikSonKullanmaTarihi.sort(function(a, b) { return a - b });
-    console.log(balikSonKullanmaTarihi);
-
+    balikSonKullanmaTarihi.sort(function(a, b) { return a - b });
+    console.log("4.Cevap :  " + balikSonKullanmaTarihi)
     return
 }
-
-gosterSonKullanmaTarihi()
-*/
+gosterSonKullanmaTarihi() // düzgün çalışmıyor. tarihleri sıralamıyor.
