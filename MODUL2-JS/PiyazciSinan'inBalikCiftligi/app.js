@@ -160,7 +160,22 @@ function bulSezonVeSehir() {
 }
 bulSezonVeSehir()
 
+//4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
 
+function gosterSonKullanmaTarihi() {
+    let newList = [];
+    fishFarm.map((day) => {
+        day.entryDate.setDate(day.entryDate.getDate() + day.durationInDays);
+        let lastUseDate = new Date(day.entryDate);
+        newList.push({ date: lastUseDate, name: day.fishType });
+    });
+    return newList;
+}
+let newListToSort = gosterSonKullanmaTarihi().sort(function(a, b) {
+    return b.date.getTime() - a.date.getTime();
+});
+console.log(newListToSort);
+gosterSonKullanmaTarihi()
 
 //5) Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari alfabetik siraya gore siralayiniz.
 
@@ -304,31 +319,3 @@ function bulZhOrtalamaGram() {
     return console.log("11.Cevap : Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramajı :" + ZhOrtalamaGram)
 }
 bulZhOrtalamaGram()
-
-
-//4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
-
-let balikSonKullanmaTarihi = [];
-
-function gosterSonKullanmaTarihi() {
-    for (let index = 0; index < fishFarm.length; index++) {
-        let dayanmaSuresi = fishFarm[index].durationInDays;
-        let girisTarihi = fishFarm[index].entryDate;
-        let balikIsimleri = fishFarm[index].fishType;
-
-        Date.prototype.addDays = function(days) {
-            var date = new Date(this.valueOf());
-            date.setDate(date.getDate() + days);
-            return date;
-        }
-        var date = girisTarihi;
-
-        balikSonKullanmaTarihi.push(balikIsimleri)
-        balikSonKullanmaTarihi.push(date.addDays(dayanmaSuresi).valueOf())
-    }
-
-    balikSonKullanmaTarihi.sort(function(a, b) { return a - b });
-    console.log("4.Cevap :  " + balikSonKullanmaTarihi)
-    return
-}
-gosterSonKullanmaTarihi() // düzgün çalışmıyor. tarihleri sıralamıyor.
