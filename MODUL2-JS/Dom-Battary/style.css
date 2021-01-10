@@ -1,0 +1,28 @@
+.pilBaslik {
+    border: 1px solid black;
+    width: 50px;
+    height: 20px;
+    line-height: 50px;
+    margin-left: 150px;
+    margin-top: 100px;
+    background-color: black;
+}
+
+.pil {
+    margin-left: 100px;
+    border: 1px solid black;
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.buton {
+    position: relative;
+    margin-top: 30px;
+    left: 100px;
+    width: 150px;
+    height: 30px;
+    display: block;
+}
