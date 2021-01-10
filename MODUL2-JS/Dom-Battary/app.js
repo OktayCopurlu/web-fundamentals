@@ -29,7 +29,6 @@ function doldur() {
         ikinciKademe.style["background-color"] = "green";
         fullKademe.style["background-color"] = "green";
     }
-    console.log(pillDolumSayaci)
     return
 
 }
