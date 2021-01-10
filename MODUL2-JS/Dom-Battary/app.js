@@ -1,7 +1,7 @@
 const doldurButton = document.getElementById("doldurma");
 const bosaltButton = document.getElementById("bosaltma");
-let ilkKademe = document.getElementById("azDoluluk");
-let ikinciKademe = document.getElementById("ortaDoluluk");
+let ilkKademe = document.getElementById("az_doluluk");
+let ikinciKademe = document.getElementById("orta_doluluk");
 let fullKademe = document.getElementById("full")
 
 doldurButton.addEventListener("click", doldur);
@@ -9,7 +9,11 @@ bosaltButton.addEventListener("click", bosalt);
 
 let pillDolumSayaci = 0;
 
+
+//Doldurma fonksiyonu
+
 function doldur() {
+
     if (pillDolumSayaci < 3) {
         pillDolumSayaci = pillDolumSayaci + 1
     }
@@ -24,16 +28,15 @@ function doldur() {
         ilkKademe.style["background-color"] = "orange";
         ikinciKademe.style["background-color"] = "orange";
 
-    } else if (pillDolumSayaci == 3) {
+    } else {
         ilkKademe.style["background-color"] = "green";
         ikinciKademe.style["background-color"] = "green";
         fullKademe.style["background-color"] = "green";
     }
     return
-
 }
 
-
+//Boşaltma fonksiyonu
 
 function bosalt() {
 
@@ -54,7 +57,7 @@ function bosalt() {
         ikinciKademe.style["background-color"] = "orange";
         fullKademe.style["background-color"] = "white";
 
-    } else if (pillDolumSayaci == 3) {
+    } else {
         ilkKademe.style["background-color"] = "green";
         ikinciKademe.style["background-color"] = "green";
         fullKademe.style["background-color"] = "green";
