@@ -1,0 +1,49 @@
+main {
+    margin: 50px auto;
+    display: flex;
+    position: relative;
+    width: 1000px;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+main:hover {
+    box-shadow: 3px 6px 10px 3px;
+}
+
+#digital {
+    margin: 50px auto;
+    width: 700px;
+    font-size: 150px;
+    box-shadow: 3px 6px 10px 3px;
+    border-radius: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#digital:hover {
+    color: white;
+    background-color: gray;
+}
+
+h1 {
+    margin: 50px auto;
+    width: 700px;
+    box-shadow: 3px 6px 10px 3px;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+h1:hover {
+    background-color: rgb(76, 55, 85);
+    color: white;
+}
+
+#ulkeler {
+    margin: 50px auto;
+    width: 700px;
+}
+
+button {
+    width: 150px;
+}
