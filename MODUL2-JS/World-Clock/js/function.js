@@ -1,37 +1,40 @@
-function saatCalistir() {
-
-    let zaman = new Date();
-
-    saat = zaman.getHours();
-    dakika = zaman.getMinutes();
-    saniye = zaman.getSeconds();
-}
-
+//Tokyo saati....
 function tokyoSaatiGoster() {
-    saatCalistir()
-    sifirEkle()
 
-    let tokyoSaati = document.getElementById('digital').innerHTML = tokyo + ":" + dakika + ":" + saniye;
+    let dateTime = new Date().toLocaleString("en-UK", { timeZone: "Asia/Tokyo" });
+    dateTime = new Date(dateTime);
+    saat = dateTime.getHours();
+    dakika = dateTime.getMinutes();
+    saniye = dateTime.getSeconds();
+    sifirEkle()
+    let tokyoSaati = document.getElementById('digital').innerHTML = saat + ":" + dakika + ":" + saniye;
+
     return tokyoSaati
 }
 
 // new york saati....
 function newYorkSaatiGoster() {
-    saatCalistir()
-    sifirEkle()
 
-    let neWSaatiGoster = document.getElementById('digital').innerHTML = newYork + ":" + dakika + ":" + saniye;
+    let dateTime = new Date().toLocaleString("en-UK", { timeZone: "america/new_york" });
+    dateTime = new Date(dateTime);
+    saat = dateTime.getHours();
+    dakika = dateTime.getMinutes();
+    saniye = dateTime.getSeconds();
+    sifirEkle()
+    let neWSaatiGoster = document.getElementById('digital').innerHTML = saat + ":" + dakika + ":" + saniye;
 
     return neWSaatiGoster
 }
 
-
 //zürich saati....
 function zurichSaatiGoster() {
 
-    saatCalistir()
+    let dateTime = new Date().toLocaleString("en-UK", { timeZone: "Europe/Vienna" });
+    dateTime = new Date(dateTime);
+    saat = dateTime.getHours();
+    dakika = dateTime.getMinutes();
+    saniye = dateTime.getSeconds();
     sifirEkle()
-
     let zurichSaatiGoster = document.getElementById('digital').innerHTML = saat + ":" + dakika + ":" + saniye;
 
     return zurichSaatiGoster
