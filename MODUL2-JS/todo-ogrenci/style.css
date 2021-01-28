@@ -1,7 +1,11 @@
-a{
-    color:white;
+a {
+    color: white;
 }
 
-#header{
+#header {
     font-size: 25px;
+}
+
+#ogrenci-sayisi {
+    font-size: 20px;
 }

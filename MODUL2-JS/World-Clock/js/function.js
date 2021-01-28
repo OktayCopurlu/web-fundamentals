@@ -41,21 +41,29 @@ function zurichSaatiGoster() {
 }
 
 
-// ana fonksiyon; saatleri çalıştırma ve durdurma fonksiyonu...
-ulkeler.addEventListener("click", function(pEvent) {
-
-    clearInterval(tokyoCalisiyor);
-    clearInterval(newYorkCalisiyor);
-    clearInterval(zuricCalisiyor);
+// ana fonksiyon; saatleri çalıştırma fonksiyonu...
+sehirler.addEventListener("click", function(pEvent) {
+    saatiDurdur()
 
     if (pEvent.target.id == "zurich") {
         zuricCalisiyor = setInterval(zurichSaatiGoster, 1000);
+        baslik.innerHTML = "Zurich Saati"
     } else if (pEvent.target.id == "newYork") {
         newYorkCalisiyor = setInterval(newYorkSaatiGoster, 1000);
+        baslik.innerHTML = "New York Saati"
     } else if (pEvent.target.id == "tokyo") {
         tokyoCalisiyor = setInterval(tokyoSaatiGoster, 1000);
+        baslik.innerHTML = "Tokyo Saati"
     }
+
 });
+
+//saatleri durdurma fonksiyonu
+function saatiDurdur() {
+    clearInterval(tokyoCalisiyor);
+    clearInterval(newYorkCalisiyor);
+    clearInterval(zuricCalisiyor);
+}
 
 // 10 dan küçük dakika ve saniyelere 0 sıfır ekleme...
 function sifirEkle() {

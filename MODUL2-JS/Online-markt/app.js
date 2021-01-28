@@ -172,4 +172,4 @@ function deleteItem(e) {
        e.target.parentElement.remove();
    }
    e.preventDefault();
-}
+}*/
