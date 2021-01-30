@@ -18,7 +18,7 @@
  * -
  *
  */
-/*
+
 const productList = [{
         productName: "Aprikosen",
         price: 7.90,
@@ -84,34 +84,93 @@ const productList = [{
     }
 ];
 
-const createTable = tableData => {
-        return (`${tableData.map(item => {
-        return (
-            `<tr>
-                            <td>${item.productName}</td>
-                            <td>${item.price}</td>
-                            <td>${item.expireDate.getFullYear()}</td>
-                            <td><img src="${item.productImage}"</img></td>
-                            <td>${item.totalCalories}</td>
-                            <td> <i class="fas fa-shopping-cart"></i></td>
+let tableHead = document.querySelector(".table-dark") // ürünler tablosu
+let sepetListe = document.querySelector(".table-striped") //
+let sepetListeTablo = document.getElementById("sepet-liste") //sepet tablosu
+let sepetTotalFiyat = document.getElementById("sepet-total") // sepet total fiyatı
+let shoppingList = []; //satın alınan ürünler array
 
-                        </tr>`
-        )
-    }).join('')}`);
+
+//total fiyatı hesaplama... 
+function totalFiyatAl() {
+    let totalFiyat = 0;
+    shoppingList.map(item => {
+        totalFiyat += item.price
+    })
+
+    return sepetTotalFiyat.innerHTML = "Toplam Fiyat  = " + totalFiyat
 }
 
-const appendTable = (table, element) => {
-    document.querySelector(element).innerHTML = table;
+//ana ürün listesi ekranda gösterme...
+function tabloElemanlari() {
+    productList.map(item => {
+        tableHead.innerHTML +=
+            `<tbody id="tbody">
+        <tr>
+        <td>${item.productName}</td>
+        <td>${item.price}</td>
+        <td>${item.expireDate.getFullYear()}</td>
+        <td><img src="${item.productImage}"</img></td>
+        <td>${item.totalCalories}</td>
+        <td><button class="btn btn-primary" id="${item.productName}">Satın Al</button></td>
+    </tr> 
+    </tbody>`
+    }).join('')
+
+    return
+}
+tabloElemanlari()
+
+//seçilen ürünü sepet arrayına gönderme...
+function createShoppingList(pEvent) {
+    productList.filter(product => {
+        if (pEvent.target.id === product.productName) {
+            shoppingList.push(product);
+            sepetListe.innerHTML = `<thead>
+            <tr>
+                <th scope="col "> Name </th>
+                <th scope="col "> Fiyat </th>
+                <th scope="col "> Product </th>
+                <th scope="col "> Sil</th>
+            </tr>
+        </thead>`;
+            totalFiyatAl()
+        }
+    })
+    sepetElemanlariGoster()
+
+    return
 }
 
-const init = () => {
-    let tableOutput = createTable(productList);
-    appendTable(tableOutput, '#squadTable tbody');
+//sepet elemanlarını ekranda gösterme...
+function sepetElemanlariGoster() {
+    shoppingList.map(item => {
+
+        sepetListe.innerHTML +=
+            `<tbody id="tbody-sepet">
+            <tr >
+                <td>${item.productName}</td>
+                <td>${item.price}</td>
+                <td><img src="${item.productImage}"</img></td>
+                <td><button class="btn btn-danger" id="silme-button">Sil</button></td>
+            </tr> 
+            </tbody>`
+    }).join('')
+    return
 }
-init();
-let addBasketToDiv = document.getElementById("#addBasket");
-addBasketToDiv.firstChild.addEventListener("click", function () {
-    let redTshirt = document.querySelector("#newDiv")
-    redTshirt.innerHTML = "";
-    redTshirt.appendChild = "Red T-Shirt" + "\n" + "20.-";
-})
+
+//sepetten ürün silme...
+function sepettenSil(pEvent) {
+    if (pEvent.target.id == "silme-button") {
+        pEvent.target.parentElement.parentElement.remove();
+
+        shoppingList.map((item, index) => {
+            shoppingList.splice(index, 1)
+        })
+
+        totalFiyatAl()
+    }
+}
+
+tableHead.addEventListener("click", createShoppingList) //sepete eklemek için click
+sepetListe.addEventListener("click", sepettenSil) // sepetten silmek için click

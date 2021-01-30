@@ -1,0 +1,19 @@
+img {
+    width: 45px;
+}
+
+#main-produck {
+    width: 500px;
+    margin-left: 50px;
+    display: flex;
+}
+
+#sepet-total {
+    font-size: 25px;
+}
+
+.urun-conteiner {}
+
+.sepet-conteiner {
+    margin-left: 100px;
+}
