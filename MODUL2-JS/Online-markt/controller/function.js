@@ -23,6 +23,7 @@ function createShoppingList(pEvent) {
             totalFiyatAl()
         }
     }).join('')
+    sepetListe.innerHTML = "";
     sepetElemanlariGoster()
     return
 }
