@@ -9,12 +9,8 @@
  */
 
 let baslik = document.querySelector("h1")
-let neresiTokyo = document.querySelector("#tokyo");
-let neresiNewYork = document.querySelector("#newYork");
-let neresiZurich = document.querySelector("#zurich");
+let neresiTokyo = document.querySelector("#tokyo").value;
+let neresiNewYork = document.querySelector("#newYork").value;
+let neresiZurich = document.querySelector("#zurich").value;
 let sehirler = document.querySelector("#sehirler")
-
-
-let newYorkCalisiyor = null;
-let zuricCalisiyor = null;
-let tokyoCalisiyor = null;
+let timeZones = "Europe/Vienna";

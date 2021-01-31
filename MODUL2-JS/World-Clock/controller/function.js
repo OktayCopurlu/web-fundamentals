@@ -1,25 +1,34 @@
 // ana fonksiyon; saatleri çalıştırma fonksiyonu...
-sehirler.addEventListener("click", function(pEvent) {
-    saatiDurdur()
 
+
+sehirler.addEventListener("click", function(pEvent) {
+    timeZones = pEvent.target.value
     if (pEvent.target.id == "zurich") {
-        zuricCalisiyor = setInterval(zurichSaatiGoster, 1000);
         baslik.innerHTML = "Zurich Saati"
     } else if (pEvent.target.id == "newYork") {
-        newYorkCalisiyor = setInterval(newYorkSaatiGoster, 1000);
         baslik.innerHTML = "New York Saati"
     } else if (pEvent.target.id == "tokyo") {
-        tokyoCalisiyor = setInterval(tokyoSaatiGoster, 1000);
         baslik.innerHTML = "Tokyo Saati"
     }
-
 });
 
-//saatleri durdurma fonksiyonu
-function saatiDurdur() {
-    clearInterval(tokyoCalisiyor);
-    clearInterval(newYorkCalisiyor);
-    clearInterval(zuricCalisiyor);
+
+setInterval(function() {
+    tokyoSaatiGoster()
+}, 1000)
+
+
+function tokyoSaatiGoster() {
+
+    let dateTime = new Date().toLocaleString("en-UK", { timeZone: timeZones });
+    dateTime = new Date(dateTime);
+    saat = dateTime.getHours();
+    dakika = dateTime.getMinutes();
+    saniye = dateTime.getSeconds();
+    sifirEkle()
+    let Saati = document.getElementById('digital').innerHTML = saat + ":" + dakika + ":" + saniye;
+
+    return Saati
 }
 
 // 10 dan küçük dakika ve saniyelere 0 sıfır ekleme...
