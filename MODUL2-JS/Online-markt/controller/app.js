@@ -18,6 +18,7 @@
  * -
  *
  */
+
 const productList = [{
         productName: "Aprikosen",
         price: 7.90,
@@ -83,93 +84,8 @@ const productList = [{
     }
 ];
 
-//const form = document.querySelector('form');
-//const input = document.querySelector('#txtTaskName');
-const btnDeleteAll = document.querySelector('#btnDeleteAll');
-const taskList = document.querySelector('#task-list');
-
-function eventListeners() {
-    // submit event
-    //form.addEventListener('submit', addNewItem);
-
-    // delete an item
-    taskList.addEventListener('click', deleteItem);
-
-    // delete all items
-    btnDeleteAll.addEventListener('click', deleteAllItems);
-}
-
-function loadItems() {
-    productList.forEach(function(item) {
-        createItem(item);
-    })
-}
-
-function createItem(text) {
-    // create li
-    const span = document.createElement('li');
-    span.className = 'list-group-item list-group-item-secondary';
-    span.appendChild(document.createTextNode(text));
-
-    // create a
-    const a = document.createElement('a');
-    a.classList = 'delete-item float-right';
-    a.setAttribute('href', '#');
-    a.innerHTML = '<i class="fas fa-times"></i>';
-
-    // add a to li
-    li.appendChild(a);
-
-    // add li to ul
-    taskList.appendChild(li);
-
-}
-// delete an item
-function deleteItem(e) {
-    if (e.target.className === 'fas fa-times') {
-
-        e.target.parentElement.parentElement.remove();
-
-    }
-    e.preventDefault();
-}
-/*
-const taskList = document.querySelector('.sil');
-
-let aprikosen = document.querySelector("#aprikosen-receli")
-aprikosen.addEventListener("click", sepeteAprikosenAt);
-
-function eventListeners() {
-   // submit event
-   form.addEventListener('submit', addNewItem);
-
-   // delete an item
-   taskList.addEventListener('click', deleteItem);
-
-   // delete all items
-   btnDeleteAll.addEventListener('click', deleteAllItems);
-}
-
-
-function sepeteAprikosenAt() {
-   document.querySelector("#newDiv").appendChild(aprikosen);
-   return
-}
-
-
-let elmaReceli = document.querySelector("#elma-receli")
-elmaReceli.addEventListener("click", sepeteElmaReceliAt);
-
-function sepeteElmaReceliAt() {
-   document.querySelector("#newDiv").appendChild(elmaReceli);
-   return
-}
-
-
-//delete an item
-function deleteItem(e) {
-   if (e.target.className === 'sil') {
-       e.target.parentElement.remove();
-   }
-   e.preventDefault();
-}*/
+let tableHead = document.querySelector(".table-dark") // ürünler tablosu
+let sepetListe = document.querySelector(".table-striped") //
+let sepetListeTablo = document.getElementById("sepet-liste") //sepet tablosu
+let sepetTotalFiyat = document.getElementById("sepet-total") // sepet total fiyatı
+let shoppingList = []; //satın alınan ürünler array
