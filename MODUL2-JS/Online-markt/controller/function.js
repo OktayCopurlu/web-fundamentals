@@ -36,7 +36,6 @@ function sepettenSil(pEvent) {
         shoppingList.filter((product, index) => {
             if (pEvent.target.id === product.productName) {
                 delete shoppingList[index]
-                console.log(index)
             }
         })
     }
