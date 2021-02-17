@@ -1,0 +1,46 @@
+* {
+    font-size: 20px;
+}
+
+main {
+    width: 800px;
+    margin: 20px auto;
+}
+
+#input {
+    width: 40px;
+}
+
+#calisma_sayfasi {
+    margin: 20px auto;
+    padding: 50px;
+    background-color: cadetblue;
+}
+
+#ogrenci_kayit_formu {
+    padding: 50px;
+    background-color: antiquewhite;
+}
+
+#cocuklar div {
+    margin: 20px auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sayilar {}
+
+#calisma_sayfasi {
+    display: flex;
+    justify-content: space-around;
+}
+
+#hangi_ogrenci {
+    display: flex;
+    justify-content: center;
+}
+
+#cocuklar {
+    background-color: gray;
+}
