@@ -17,60 +17,27 @@ Her soru oturumun süresi 10 saniyedir.
 10 saniye sonunda veya cocugun 10 soruyu bitirmesi durumunda program bitecek ve yine isim listesine geri dönecektir.
 Cocuk güncellenmis isim listesinde puanini görebilecektir.
 */
+let puan = 0;
+let puanArray = []
 
-let puanArray = [{
-        ogrenciAdi: "Mehmet Ali",
-        ogrenciSoyadi: "Kayali",
-        puan: 60
-    },
-    {
-        ogrenciAdi: "Kamil",
-        ogrenciSoyadi: "Morduman",
-        puan: 40
-    }
-]
-
+let bitir = document.querySelector("#bitir")
 let cocuklar = document.querySelector("#cocuklar")
 let sayilarinDivi = document.querySelector("#sayilar")
 let button = document.querySelector("#kontrol")
-let counter = 0;
-
 let ogrenciAdi = document.querySelector("#ogrenci_adi")
 let ogrenciSoyadi = document.querySelector("#ogrenci_soyadi")
 let ogrenciEkle = document.querySelector("#ogrenci_ekle")
 let hangiOgrenci = document.querySelector("#hangi_ogrenci")
 
-let toplamCevap = 0;
-//let dogruCevap = 0;
-let puan = 0;
-
-let sonuc = 0;
 let soru = 1;
-
-
-let student = {
-    ogrenciAdi: "",
-    ogrenciSoyadi: "",
-    puan: ""
-}
-
-function createStudent() {
-    student = {
-        ogrenciAdi: `${ogrenciAdi.value}`,
-        ogrenciSoyadi: `${ogrenciSoyadi.value}`,
-        puan: `${puan}`
-    };
-    cocuklar.innerHTML = "";
-    return student;
-}
-
+let sayi1 = 0;
+let sayi2 = 0;
+let toplam = 0;
+let counter = 0;
 
 ogrenciListesiniYazdir()
-
-
-
-
 
 sayilarinDivi.addEventListener("click", sonucAl)
 cocuklar.addEventListener("click", calismaBaslat)
 ogrenciEkle.addEventListener("click", arrayaOgrenciEkle)
+hangiOgrenci.addEventListener("click", oyunuBitir)
