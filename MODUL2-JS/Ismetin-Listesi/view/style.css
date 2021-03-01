@@ -1,0 +1,35 @@
+#input_div {
+    width: 500px;
+    display: inline;
+    margin-right: 20px;
+}
+
+#musteri_ekle {
+    display: flex;
+}
+
+#musteri_listesi {
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 10px;
+}
+
+#hedef_kisiler {
+    background-color: cadetblue;
+    padding: 20px;
+    margin: 10px;
+}
+
+#adres_listesi {
+    background-color: rgb(231, 168, 147);
+    padding: 20px;
+    margin: 10px;
+}
+
+.row {
+    margin: 20px;
+}
+
+.adresler {
+    font-size: x-large;
+}
